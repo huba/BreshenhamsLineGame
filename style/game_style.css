@@ -1,0 +1,40 @@
+body, html {
+    height: 100%;
+}
+
+#container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    min-width: 880px;
+    width: 70%;
+    clear: both;
+
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#container div
+{
+    border-radius: 10px;
+}
+
+.horizontal {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+    margin-left: 0px;
+}
+
+#grid {
+    background: black;
+    width: 600px;
+    height: 600px;
+}
+
+#control {
+    background: #DDDDDD;
+    height: 600px;
+    width: 250px;
+}
