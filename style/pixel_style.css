@@ -20,18 +20,23 @@ div.p_bottom {
 }
 
 div.paddle {
+    position: relative;
+    left: 0px;
+    right: 0px;
     width: 50px;
     height: 50px;
 }
 
-div.paddle div{
-    height: 25px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+div.paddle[state] div{
+
 }
 
 div.pixel_paddle[state=off] div {
-
+    height: 25px;
+    width: 50px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background: black;
 }
 
 div.pixel_paddle[state=on] div {
