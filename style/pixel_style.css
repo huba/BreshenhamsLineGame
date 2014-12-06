@@ -1,0 +1,39 @@
+div.pixel_base {
+    width: 50px;
+    height: 50px;
+}
+
+div.pixel_base div {
+    height: 25px;
+}
+
+div.p_top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background: black;
+}
+
+div.p_bottom {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: white;
+}
+
+div.paddle {
+    width: 50px;
+    height: 50px;
+}
+
+div.paddle div{
+    height: 25px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+div.pixel_paddle[state=off] div {
+
+}
+
+div.pixel_paddle[state=on] div {
+
+}

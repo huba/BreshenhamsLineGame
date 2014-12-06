@@ -10,14 +10,10 @@ body, html {
     width: 70%;
     clear: both;
 
+    /*Calculate on load method for vertical centering.*/
     position: relative;
     top: 50%;
     transform: translateY(-50%);
-}
-
-#container div
-{
-    border-radius: 10px;
 }
 
 .horizontal {
@@ -27,13 +23,21 @@ body, html {
     margin-left: 0px;
 }
 
+.pixel_container {
+    width: 60px;
+    height: 60px;
+    padding: 5px;
+}
+
 #grid {
+    border-radius: 10px;
     background: black;
     width: 600px;
     height: 600px;
 }
 
 #control {
+    border-radius: 10px;
     background: #DDDDDD;
     height: 600px;
     width: 250px;
