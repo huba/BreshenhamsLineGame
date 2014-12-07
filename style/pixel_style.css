@@ -25,7 +25,7 @@
 .p_top {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    background: #181818;
+    background: #212121;
 }
 
 .p_bottom {
@@ -79,8 +79,8 @@
 @-webkit-keyframes turn_off_color {
     0%  {background: #EEEEEE}
     49% {background: #EEEEEE}
-    50% {background: #181818}
-    100%{background: #181818}
+    50% {background: #212121}
+    100%{background: #212121}
 }
 
 @-webkit-keyframes turn_on {
@@ -92,8 +92,8 @@
 }
 
 @-webkit-keyframes turn_on_color {
-    0%  {background: #181818}
-    50% {background: #181818}
+    0%  {background: #212121}
+    50% {background: #212121}
     51% {background: #EEEEEE}
     100%{background: #EEEEEE}
 }

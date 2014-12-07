@@ -1,12 +1,14 @@
 body, html {
     height: 100%;
+    background: LightCyan;
+    margin: 0px;
 }
 
 #container {
     margin-left: auto;
     margin-right: auto;
     padding-left: 10px;
-    min-width: 880px;
+    min-width: 884px;
     width: 70%;
     clear: both;
 
@@ -19,13 +21,13 @@ body, html {
 .horizontal {
     position: relative;
     display: inline-block;
-    margin: 10px;
-    margin-left: 0px;
+    margin-right: 10px;
 }
 
 #grid {
     border-radius: 5px;
     background: #333333;
+    opacity: 0.8;
     width: 600px;
     height: 600px;
     padding: 2px
@@ -36,4 +38,5 @@ body, html {
     background: #DDDDDD;
     height: 600px;
     width: 250px;
+    padding: 2px;
 }

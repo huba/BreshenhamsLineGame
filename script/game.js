@@ -20,3 +20,7 @@ $(document).ready(function() {
         $(this).toggleClass('off')
     });
 });
+
+function resetGame() {
+    $('.pixel_container').addClass('off');
+}

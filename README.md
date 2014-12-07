@@ -1,6 +1,8 @@
 Breshenham's Line Game
 ======================
 Interactive game to demonstrate Breshenham's line algorithm.
+This game is made to supplement the explanation found on CS Field Guide
+http://www.csfieldguide.org.nz/ComputerGraphics.html#bresenham-s-line-algorithm
 
 Licence
 -------
