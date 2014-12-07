@@ -1,44 +1,99 @@
-div.pixel_base {
-    width: 50px;
-    height: 50px;
+.grid_row {
+    height: 30px;
+    width: 100%;
 }
 
-div.pixel_base div {
-    height: 25px;
-}
-
-div.p_top {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    background: black;
-}
-
-div.p_bottom {
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    background: white;
-}
-
-div.paddle {
+.pixel_container {
     position: relative;
-    left: 0px;
-    right: 0px;
-    width: 50px;
-    height: 50px;
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    margin: 2px;
 }
 
-div.paddle[state] div{
-
+.pixel_base {
+    z-index: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
 
-div.pixel_paddle[state=off] div {
-    height: 25px;
-    width: 50px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    background: black;
+.pixel_base div {
+    height: 50%;
 }
 
-div.pixel_paddle[state=on] div {
+.p_top {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background: #181818;
+}
 
+.p_bottom {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background: #EEEEEE;
+}
+
+.pixel_container .pixel_paddle {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    -webkit-animation: turn_on 0.2s;
+    -webkit-animation-fill-mode: both;
+}
+
+.pixel_container .pixel_paddle div {
+    height: 50%;
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+    -webkit-animation: turn_on_color 0.2s;
+    -webkit-animation-fill-mode: both;
+}
+
+
+/*Animate turning off*/
+.pixel_container.off .pixel_paddle div {
+    -webkit-animation: turn_off_color 0.2s;
+    -webkit-animation-fill-mode: both;
+}
+
+.pixel_container.off .pixel_paddle {
+    -webkit-animation: turn_off 0.2s;
+    -webkit-animation-fill-mode: both;
+}
+
+
+/*Keyframe definitions*/
+@-webkit-keyframes turn_off {
+    0%  {-webkit-transform: rotateX(0deg)}
+    25% {-webkit-transform: rotateX(45deg)}
+    50% {-webkit-transform: rotateX(90deg)}
+    75% {-webkit-transform: rotateX(135deg)}
+    100%{-webkit-transform: rotateX(180deg)}
+}
+
+@-webkit-keyframes turn_off_color {
+    0%  {background: #EEEEEE}
+    49% {background: #EEEEEE}
+    50% {background: #181818}
+    100%{background: #181818}
+}
+
+@-webkit-keyframes turn_on {
+    0%  {-webkit-transform: rotateX(180deg)}
+    25% {-webkit-transform: rotateX(135deg)}
+    50% {-webkit-transform: rotateX(45deg)}
+    75% {-webkit-transform: rotateX(90deg)}
+    100%{-webkit-transform: rotateX(0deg)}
+}
+
+@-webkit-keyframes turn_on_color {
+    0%  {background: #181818}
+    50% {background: #181818}
+    51% {background: #EEEEEE}
+    100%{background: #EEEEEE}
 }
