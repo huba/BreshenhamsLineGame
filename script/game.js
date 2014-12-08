@@ -4,7 +4,7 @@ var pixel_template = '<div class="pixel_container off"><div class="pixel_base"><
 $(document).ready(function() {
     // add grid rows
     for (var i = 0; i < 20; i++) {
-        var grid_row = $(grid_row_template).attr('y', i);
+        var grid_row = $(grid_row_template).attr('y', 19 - i);
         $('#grid').append(grid_row);
     }
 
@@ -17,6 +17,7 @@ $(document).ready(function() {
         }
     });
 
+    // Assign callbacks
     $('.pixel_container').click(function() {
         $(this).toggleClass('off')
     });
