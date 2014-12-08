@@ -34,3 +34,46 @@
     height: 130px;
     overflow: hidden;
 }
+
+.interaction_area {
+    width: 100%;
+}
+
+.button_area {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 60px;
+}
+
+.button_area a {
+    width: 50%;
+    height: 22px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    display: inline-block;
+    color: Gainsboro;
+    background: SlateGrey;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.button_area a#reset {
+    width: 100%;
+}
+
+.button_area a#reset:hover {
+    background: #704050;
+}
+
+.button_area a#reset:active{
+    background: #602030;
+}
+
+.button_area a:hover {
+    background: #506070;
+}
+
+.button_area a:active {
+    background: #203040;
+}
