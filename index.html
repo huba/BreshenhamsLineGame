@@ -5,17 +5,53 @@
     <!-- TODO: make stylesheets prettier, layout is okay so leave that alone. -->
     <link rel="stylesheet" type="text/css" href="style/game_style.css"><link/>
     <link rel="stylesheet" type="text/css" href="style/pixel_style.css"></link>
+    <link rel="stylesheet" type="text/css" href="style/control_panel.css"></link>
 </head>
 <body>
     <div id="container">
         <div id="grid" class="horizontal">
             <!--The grid is automatically generated in here.-->
-        </div>
-        <div id="control" class="horizontal">
-
+        </div><!--Commenting out whitespace, this can be fixed with floating the elements...
+     --><div id="control" class="horizontal">
+            <div class="table_container">
+                <table id="header" rules="groups">
+                    <thead>
+                        <tr>
+                            <th>A</th>
+                            <th>B</th>
+                            <th>P</th>
+                        </tr>
+                    </thead>
+                </table>
+                <table id="body" rules="groups">
+                    <tbody>
+                        <tr>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
+
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
     <script type="text/javascript" src="script/game.js"></script>
-</body
+</body>
 </html>

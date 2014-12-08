@@ -1,0 +1,36 @@
+#control table {
+    width: 100%;
+}
+
+#control #header {
+    position: absolute;
+    border-bottom: solid #333333 1px;
+    background: SlateGrey;
+    color: Gainsboro;
+    z-index: 1;
+}
+
+#control #body{
+    position: absolute;
+    border: none;
+    bottom: 0px;
+    background: white;
+    z-index: 0;
+}
+
+#control #body tbody tr:last-child {
+    background: LightGreen;
+}
+
+#control td, th {
+    width: 87px;
+    padding: 3px;
+    text-align: center;
+}
+
+.table_container {
+    width: 100%;
+    position: relative;
+    height: 130px;
+    overflow: hidden;
+}

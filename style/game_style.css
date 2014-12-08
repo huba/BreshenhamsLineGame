@@ -1,3 +1,4 @@
+/*TODO: implement this with other prefixes too.*/
 body, html {
     height: 100%;
     background: LightCyan;
@@ -7,36 +8,36 @@ body, html {
 #container {
     margin-left: auto;
     margin-right: auto;
-    padding-left: 10px;
-    min-width: 884px;
-    width: 70%;
+    width: 884px;
     clear: both;
 
     /*Calculate on load method for vertical centering.*/
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+
+    border-radius: 5px;
+    overflow: hidden;
 }
 
 .horizontal {
     position: relative;
     display: inline-block;
-    margin-right: 10px;
+    vertical-align: middle;
+    margin: 0px;
 }
 
 #grid {
-    border-radius: 5px;
-    background: #333333;
-    opacity: 0.8;
+    background: SlateGrey;
+    /*opacity: 0.8;*/
     width: 600px;
     height: 600px;
-    padding: 2px
+    padding: 2px;
+    -webkit-user-select: none;
 }
 
 #control {
-    border-radius: 10px;
-    background: #DDDDDD;
-    height: 600px;
-    width: 250px;
-    padding: 2px;
+    background: Gainsboro;
+    height: 604px;
+    width: 280px;
 }

@@ -1,3 +1,7 @@
+/*Stylesheet for the "pixels" in the grid for BrenshenhamsLineGame.
+Author: Huba Nagy*/
+/*TODO: implement prefixed properties with other prefixes as well.*/
+
 .grid_row {
     height: 30px;
     width: 100%;
@@ -8,7 +12,9 @@
     display: inline-block;
     width: 26px;
     height: 26px;
-    margin: 2px;
+    margin: 1px;
+    border: 1px solid DarkGray;
+    border-radius: 5px;
 }
 
 .pixel_base {
@@ -25,7 +31,7 @@
 .p_top {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    background: #212121;
+    background: LightSlateGrey;
 }
 
 .p_bottom {
@@ -79,8 +85,8 @@
 @-webkit-keyframes turn_off_color {
     0%  {background: #EEEEEE}
     49% {background: #EEEEEE}
-    50% {background: #212121}
-    100%{background: #212121}
+    50% {background: LightSlateGrey}
+    100%{background: LightSlateGrey}
 }
 
 @-webkit-keyframes turn_on {
@@ -92,8 +98,8 @@
 }
 
 @-webkit-keyframes turn_on_color {
-    0%  {background: #212121}
-    50% {background: #212121}
+    0%  {background: LightSlateGrey}
+    50% {background: LightSlateGrey}
     51% {background: #EEEEEE}
     100%{background: #EEEEEE}
 }
