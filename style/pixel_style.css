@@ -13,8 +13,16 @@ Author: Huba Nagy*/
     width: 26px;
     height: 26px;
     margin: 1px;
-    border: 1px solid DarkGray;
+    border: 1px solid #445577;
     border-radius: 5px;
+}
+
+.pixel_container.current {
+    border: 1px solid LightGreen;
+}
+
+.pixel_container.end_point {
+    border: 1px solid LightCoral;
 }
 
 .pixel_base {
@@ -31,7 +39,7 @@ Author: Huba Nagy*/
 .p_top {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    background: LightSlateGrey;
+    background: #667799;
 }
 
 .p_bottom {
@@ -85,8 +93,8 @@ Author: Huba Nagy*/
 @-webkit-keyframes turn_off_color {
     0%  {background: #EEEEEE}
     49% {background: #EEEEEE}
-    50% {background: LightSlateGrey}
-    100%{background: LightSlateGrey}
+    50% {background: #667799}
+    100%{background: #667799}
 }
 
 @-webkit-keyframes turn_on {
@@ -98,8 +106,8 @@ Author: Huba Nagy*/
 }
 
 @-webkit-keyframes turn_on_color {
-    0%  {background: LightSlateGrey}
-    50% {background: LightSlateGrey}
+    0%  {background: #667799}
+    50% {background: #667799}
     51% {background: #EEEEEE}
     100%{background: #EEEEEE}
 }

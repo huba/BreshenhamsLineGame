@@ -23,8 +23,31 @@ $(document).ready(function() {
     });
 
     $('a#reset').click(resetGrid);
+
+    // Start the game
+    initiateGame();
 });
 
 function resetGrid() {
-    $('.pixel_container').addClass('off');
+    $('.pixel_container').addClass('off').removeClass('current').removeClass('end_point');
+    initiateGame();
+}
+
+function initiateGame() {
+    var start_x = randInt(0, 10);
+    var start_y = randInt(0, 10);
+    getPixel(start_x, start_y).addClass('current').removeClass('off');
+
+    var end_x = randInt(start_x + 5, 19);
+    var end_y = randInt(start_y + 1, start_y + (end_x - start_x));
+    getPixel(end_x, end_y).addClass('end_point').removeClass('off');
+}
+
+function getPixel(x, y) {
+    var selector = '.pixel_container[y=' + String(y) + '][x=' + String(x) + ']';
+    return $(selector);
+}
+
+function randInt(min, max) {
+    return Math.floor(Math.random() * (max - min) + min);
 }

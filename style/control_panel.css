@@ -5,7 +5,7 @@
 #control #header {
     position: absolute;
     border-bottom: solid #333333 1px;
-    background: SlateGrey;
+    background: #506080;
     color: Gainsboro;
     z-index: 1;
 }
@@ -53,7 +53,7 @@
     padding-bottom: 4px;
     display: inline-block;
     color: Gainsboro;
-    background: SlateGrey;
+    background: #506080;
     text-align: center;
     vertical-align: middle;
 }
@@ -63,7 +63,7 @@
 }
 
 .button_area a#reset:hover {
-    background: #704050;
+    background: #773344;
 }
 
 .button_area a#reset:active{
@@ -71,7 +71,7 @@
 }
 
 .button_area a:hover {
-    background: #506070;
+    background: #445577;
 }
 
 .button_area a:active {
