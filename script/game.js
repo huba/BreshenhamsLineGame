@@ -8,6 +8,7 @@ $(document).ready(function() {
         $('#grid').append(grid_row);
     }
 
+    // generate each row
     $('#grid .grid_row').each(function() {
         var y = $(this).attr('y');
         for (var j = 0; j < 20; j++) {
@@ -19,8 +20,10 @@ $(document).ready(function() {
     $('.pixel_container').click(function() {
         $(this).toggleClass('off')
     });
+
+    $('a#reset').click(resetGrid);
 });
 
-function resetGame() {
+function resetGrid() {
     $('.pixel_container').addClass('off');
 }
