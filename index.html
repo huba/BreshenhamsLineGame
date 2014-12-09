@@ -13,47 +13,41 @@
             <!--The grid is automatically generated in here.-->
         </div><!--Commenting out whitespace, this can be fixed with floating the elements...
      --><div id="control" class="horizontal">
-            <div class="table_container">
-                <table id="header" rules="groups">
-                    <thead>
-                        <tr>
-                            <th>A</th>
-                            <th>B</th>
-                            <th>P</th>
-                        </tr>
-                    </thead>
-                </table>
-                <table id="body" rules="groups">
-                    <tbody>
-                        <tr>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                        </tr>
-                        <tr>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                        </tr>
-                        <tr>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                        </tr>
-                        <tr>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="interaction_area">
+            <div id="interaction_area">
+                <div class="shifter">
+                    <div class="page">
+                        <!--The first page is intentionally left blank. hehe-->
+                    </div>
+                    <div class="page">
+                        <div id="point_a" class="point_info">
+                            <div id="x">x<span class="subscript">1</span> = <span class="val"></span></div><div id="y">y<span class="subscript">1</span> = <span class="val"></span></div>
+                        </div>
+                        <div id="point_b" class="point_info">
+                            <div id="x">x<span class="subscript">2</span> = <span class="val"></span></div><div id="y">y<span class="subscript">2</span> = <span class="val"></span></div>
+                        </div>
+                    </div>
+                    <div class="page">
 
+                    </div>
+                    <div class="page">
+
+                    </div>
+                    <div class="page">
+
+                    </div>
+                </div>
             </div>
-            <div class="button_area">
-                <a id="hint">Hint</a><a id="give_up">Demonstrate</a>
-                <a id="reset">Reset Grid</a>
+
+            <div id="information_area">
+                <div id="speech_bubble">
+                    <p>
+                        This speech bubble will explain the demonstration of the algorithm
+                        then appear to give hints when the player gets something wrong.
+                        Font suggestions are very welcome, I'm going to sleep now...
+                        Try entering <i>"$('#speech_bubble').toggleClass('overtake');"</i>
+                        into the JS console;
+                    </p>
+                </div>
             </div>
         </div>
     </div>

@@ -25,6 +25,19 @@ Author: Huba Nagy*/
     border: 1px solid LightCoral;
 }
 
+.pixel_container.option {
+    border: 1px solid DarkSalmon;
+    -webkit-animation-name: pulsate_option;
+    -webkit-animation-duration: 0.7s;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-iteration-count: 6;
+}
+
+@-webkit-keyframes pulsate_option {
+    0%  { border-color: DarkSalmon; }
+    100%{ border-color: FireBrick; }
+}
+
 .pixel_base {
     z-index: 0;
     position: absolute;
