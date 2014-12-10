@@ -3,6 +3,7 @@ body, html {
     height: 100%;
     background: LightCyan;
     margin: 0px;
+    font-family: Arial;
 }
 
 #container {

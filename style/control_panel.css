@@ -16,14 +16,19 @@
     height: 354px; /*hehe*/
 }
 
-#control #interaction_area .point_info {
+#control .formula {
     width: 100%;
     font-style: italic;
 }
 
-#control #interaction_area .point_info div {
+#control .formula div {
+    height: 25px;
     display: inline-block;
     text-align: center;
+    width: 100%;
+}
+
+#control .formula.point_info div {
     width: 50%;
 }
 
@@ -70,7 +75,8 @@
     top: -5%;
 }
 
-#control #information_area #speech_bubble .page p {
+#control #information_area #speech_bubble .page p, li{
+    max-width: 230px;
     margin: 0px;
     padding: 5px;
     font-family: Arial;

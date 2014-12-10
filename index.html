@@ -36,21 +36,108 @@
                 <div id="speech_bubble">
                     <div class="page" id="intro_0" overtake="true">
                         <p>
-                            This speech bubble will explain the demonstration of the algorithm
-                            then appear to give hints when the player gets something wrong.
-                            Font suggestions are very welcome.
+                            A faster way for a computer to calculate which pixels to colour in to
+                            give the appearance of a straight line between two points is to
+                            use Brensenham's Line Algorithm. If you haven't done so you can read more
+                            about it on <a href="http://www.csfieldguide.org.nz/ComputerGraphics.html#bresenham-s-line-algorithm">CS Field Guide</a>.
+                        </p>
+                        <p>
+                            Would you like me to explain first or do you want to try straight away?
+                        </p>
+                        <div class="button_area">
+                            <a id="left">Let me try</a><a id="right">Explain first</a>
+                        </div>
+                    </div>
+                    <div class="page" id="intro_1" overtake="true">
+                        <p>
+                            We are given two points to start with. A <span style="color:ForestGreen; text-shadow: 0px 0px 0px black">start point</span>
+                            and an <span style="color:FireBrick; text-shadow: 0px 0px 0px black">end point</span>.
+                        </p>
+                        <p>
+                            The coordinates of the <span style="color:ForestGreen; text-shadow: 0px 0px 0px black">start point</span> are:
+                            <div id="point_a" class="formula point_info">
+                                <div id="x">x<span class="subscript">1</span> = <span class="val"></span></div><div id="y">y<span class="subscript">1</span> = <span class="val"></span></div>
+                            </div>
+                        </p>
+                        <p>
+                            The coordinates of the <span style="color:FireBrick; text-shadow: 0px 0px 0px black">end point</span> are:
+                            <div id="point_b" class="formula point_info">
+                                <div id="x">x<span class="subscript">2</span> = <span class="val"></span></div><div id="y">y<span class="subscript">2</span> = <span class="val"></span></div>
+                            </div>
                         </p>
                         <div class="button_area">
                             <a id="right">Next</a>
                         </div>
                     </div>
-                    <div class="page" id="intro_1" overtake="false">
+                    <div class="page" id="intro_2" overtake="true">
                         <p>
-
+                            The algorithm uses three variables <i>A</i>, <i>B</i> and <i>P</i>. First of all
+                            we need to calculate the initial values of these variables using the following equations:
+                        </p>
+                        <div class="formula">
+                            <div id="A_equation"></div>
+                            <div id="B_equation"></div>
+                            <div id="P_equation"></div>
+                        </div>
+                        <p>
+                            We can substitute the given coordinates into these equations.
+                        </p>
+                        <div class="button_area" style="display: none">
+                            <a id="right">Next</a>
+                        </div>
+                    </div>
+                    <div class="page" id="intro_3" overtake="true">
+                        <p>
+                            Once we have calculated the initial values of <i>A</i>, <i>B</i> and <i>P</i>
+                            we can start drawing the line following a few simple rules.
+                        </p>
+                        <ul>
+                            <li>If <i>P</i> is less than 0, color in a new pixel on the same line as the last pixel, and add <i>A</i> to <i>P</i>.</li>
+                            <li>If <i>P</i> is greater than or equal to 0, color in a new pixel in the line above the last pixel, and add <i>B</i> to <i>P</i>.</li>
+                        </ul>
+                        <p>
+                            And repeat this decision until we reach the end point.
                         </p>
                         <div class="button_area">
-                            <a id="left">Again</a><a id="right">Next</a>
+                            <a id="right">Next</a>
                         </div>
+                    </div>
+                    <div class="page" id="iteration" overtake="true">
+                        <div class="formula">
+                            <div id="A_equation"></div>
+                            <div id="B_equation"></div>
+                            <div id="P_equation"></div>
+                        </div>
+                        <p id="greater">
+                            <i>P</i> is greater than 0 so we pick the pixel that is one line above the previous one and add
+                            <i>B</i> to <i>P</i>.
+                        </p>
+                        <p id="equal">
+                            <i>P</i> is equal to 0 so we pick the pixel that is one line above the previous one and add
+                            <i>B</i> to <i>P</i>.
+                        </p>
+                        <p id="smaller">
+                            <i>P</i> is less than 0 so we pick the pixel that is in line with the previous one and add
+                            <i>A</i> to <i>P</i>.
+                        </p>
+                        <div class="button_area">
+                            <a id="left">Skip</a><a id="right">Next</a>
+                        </div>
+                    </div>
+                    <div class="page" id="final_note" overtake="true">
+                        <p>
+                            Once we get to the end point we have finished drawing the line.
+                            Would you like me to show you again?
+                        </p>
+                        <div class="button_area">
+                            <a id="left">Explain again</a><a id="right">Got it</a>
+                        </div>
+                    </div>
+
+                    <div class="page" id="good_luck" overtake="false">
+                        <p>
+                            Alright, now it's your turn to try. This will be implemented soon...
+                        </p>
                     </div>
                 </div>
             </div>

@@ -22,7 +22,7 @@ Author: Huba Nagy*/
 }
 
 .pixel_container.end_point {
-    border: 1px solid LightCoral;
+    border: 1px solid FireBrick;
 }
 
 .pixel_container.option {
@@ -33,9 +33,17 @@ Author: Huba Nagy*/
     -webkit-animation-iteration-count: 6;
 }
 
+.pixel_container.option.above {
+
+}
+
+.pixel_container.option.inline {
+
+}
+
 @-webkit-keyframes pulsate_option {
     0%  { border-color: DarkSalmon; }
-    100%{ border-color: FireBrick; }
+    100%{ border-color: LightCoral; }
 }
 
 .pixel_base {
