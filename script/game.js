@@ -27,24 +27,44 @@ $(document).ready(function() {
     });
 
     // Assign callbacks
-    $('a#reset').click(resetGrid);
+    $('#intro_0 > .button_area > a#right').click(function() {
+        setSpeechBubble('intro_1');
+    });
 
     // Start the game
+    setSpeechBubble('intro_0');
     initiateGame();
 });
 
-function resetGrid() {
-    $('.pixel_container').addClass('off').removeClass('current').removeClass('end_point').removeClass('option');
-    initiateGame();
+function setSpeechBubble(id) {
+    // Firstly deactivate all speech bubble contents
+    $('#control > #information_area > #speech_bubble > .page.active').removeClass('active');
+
+    // Then activate new content
+    $('#control > #information_area > #speech_bubble > .page#' + id).addClass('active');
+
+    if ($('#control > #information_area > #speech_bubble > .page.active').attr('overtake') == 'true') {
+        $('#control > #information_area > #speech_bubble').addClass('overtake');
+    } else {
+        $('#control > #information_area > #speech_bubble').removeClass('overtake');
+    }
 }
 
 function initiateGame() {
+    /*
+    This function generates the starting points.
+    */
+    // First clear everything
+    $('.pixel_container').addClass('off').removeClass('current').removeClass('end_point').removeClass('option');
+
+    // Then randomize the start point
     var start_x = randInt(0, 10);
     var start_y = randInt(0, 10);
     $('#point_a > #x > .val').text(String(start_x));
     $('#point_a > #y > .val').text(String(start_y));
     setCurrent(start_x, start_y);
 
+    // And randomize the endpoint based on the startpoint
     var end_x = randInt(start_x + 5, 19);
     var end_y = randInt(start_y + 1, start_y + (end_x - start_x));
     $('#point_b > #x > .val').text(String(end_x));
@@ -53,6 +73,9 @@ function initiateGame() {
 }
 
 function setCurrent(x, y) {
+    /*
+    Sets the pixel at given coordinate to current;
+    */
     current_x = x; current_y = y;
     $('.pixel_container.current').removeClass('current');
     getPixel(x, y).addClass('current').removeClass('off');
@@ -61,6 +84,9 @@ function setCurrent(x, y) {
 }
 
 function getPixel(x, y) {
+    /*
+    Function that accesses the pixel at a given coordinate
+    */
     if (y > 19) {y = 19};
     if (x > 19) {x = 19};
     var selector = '.pixel_container[y=' + String(y) + '][x=' + String(x) + ']';
@@ -68,5 +94,8 @@ function getPixel(x, y) {
 }
 
 function randInt(min, max) {
+    /*
+    Random integer within range
+    */
     return Math.floor(Math.random() * (max - min) + min);
 }

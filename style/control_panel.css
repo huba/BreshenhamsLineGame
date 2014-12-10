@@ -40,6 +40,7 @@
 }
 
 
+
 #control #information_area {
     width: 100%;
     height: 250px;
@@ -51,6 +52,7 @@
     top: 50%;
     transform: translateY(-50%);
     width: 240px;
+    max-height: 210px;
     height: 210px;
     background: white;
     border-radius: 5px;
@@ -63,20 +65,52 @@
 }
 
 #control #information_area #speech_bubble.overtake {
+    max-height: 450px;
     height: 450px;
     top: -5%;
 }
 
-#control #information_area #speech_bubble p {
+#control #information_area #speech_bubble .page p {
     margin: 0px;
     padding: 5px;
     font-family: Arial;
 }
 
-#control #information_area #speech_bubble p i {
+#control #information_area #speech_bubble .page {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    /*opacity: 0;*/
+    display: none;
+    /*-webkit-transition-property: opacity;
+    -webkit-transition-duration: 0.9s;*/
 }
 
-.button_area a {
+#control #information_area #speech_bubble .page.active {
+    /*opacity: 1;*/
+    display: block;
+}
+
+#control #information_area #speech_bubble .page .button_area {
+    position: absolute;
+    bottom: 5px;
+    color: Gainsboro;
+    width: 202px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#control #information_area #speech_bubble .page .button_area a:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+#control #information_area #speech_bubble .page .button_area a:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#control #information_area #speech_bubble .page .button_area a {
     width: 50%;
     height: 22px;
     padding-top: 4px;
@@ -88,23 +122,19 @@
     vertical-align: middle;
 }
 
-.button_area a#reset {
-    width: 100%;
+#control #information_area #speech_bubble .page .button_area a#left {
+    float: left;
 }
 
-.button_area a#reset:hover {
-    background: #773344;
+#control #information_area #speech_bubble .page .button_area a#right {
+    float: right;
 }
 
-.button_area a#reset:active{
-    background: #602030;
-}
-
-.button_area a:hover {
+#control #information_area #speech_bubble .page .button_area a:hover {
     background: #334466;
 }
 
-.button_area a:active {
+#control #information_area #speech_bubble .page .button_area a:active {
     background: #203040;
 }
 

@@ -15,10 +15,10 @@
      --><div id="control" class="horizontal">
             <div id="interaction_area">
                 <div class="shifter">
-                    <div class="page">
+                    <div class="page" id="first_blank">
                         <!--The first page is intentionally left blank. hehe-->
                     </div>
-                    <div class="page">
+                    <div class="page" id="initial_calculations">
                         <div id="point_a" class="point_info">
                             <div id="x">x<span class="subscript">1</span> = <span class="val"></span></div><div id="y">y<span class="subscript">1</span> = <span class="val"></span></div>
                         </div>
@@ -26,13 +26,7 @@
                             <div id="x">x<span class="subscript">2</span> = <span class="val"></span></div><div id="y">y<span class="subscript">2</span> = <span class="val"></span></div>
                         </div>
                     </div>
-                    <div class="page">
-
-                    </div>
-                    <div class="page">
-
-                    </div>
-                    <div class="page">
+                    <div class="page" id="iteration_helper">
 
                     </div>
                 </div>
@@ -40,13 +34,24 @@
 
             <div id="information_area">
                 <div id="speech_bubble">
-                    <p>
-                        This speech bubble will explain the demonstration of the algorithm
-                        then appear to give hints when the player gets something wrong.
-                        Font suggestions are very welcome, I'm going to sleep now...
-                        Try entering <i>"$('#speech_bubble').toggleClass('overtake');"</i>
-                        into the JS console;
-                    </p>
+                    <div class="page" id="intro_0" overtake="true">
+                        <p>
+                            This speech bubble will explain the demonstration of the algorithm
+                            then appear to give hints when the player gets something wrong.
+                            Font suggestions are very welcome.
+                        </p>
+                        <div class="button_area">
+                            <a id="right">Next</a>
+                        </div>
+                    </div>
+                    <div class="page" id="intro_1" overtake="false">
+                        <p>
+
+                        </p>
+                        <div class="button_area">
+                            <a id="left">Again</a><a id="right">Next</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
