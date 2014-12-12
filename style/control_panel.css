@@ -86,15 +86,7 @@
     position: absolute;
     height: 100%;
     width: 100%;
-    /*opacity: 0;*/
     display: none;
-    /*-webkit-transition-property: opacity;
-    -webkit-transition-duration: 0.9s;*/
-}
-
-#control #information_area #speech_bubble .page.active {
-    /*opacity: 1;*/
-    display: block;
 }
 
 #control #information_area #speech_bubble .page .button_area {
@@ -128,11 +120,11 @@
     vertical-align: middle;
 }
 
-#control #information_area #speech_bubble .page .button_area a#left {
+#control #information_area #speech_bubble .page .button_area a#lb {
     float: left;
 }
 
-#control #information_area #speech_bubble .page .button_area a#right {
+#control #information_area #speech_bubble .page .button_area a#rb {
     float: right;
 }
 

@@ -6,6 +6,8 @@
     <link rel="stylesheet" type="text/css" href="style/game_style.css"><link/>
     <link rel="stylesheet" type="text/css" href="style/pixel_style.css"></link>
     <link rel="stylesheet" type="text/css" href="style/control_panel.css"></link>
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=UnifrakturMaguntia" />
+    <link rel="stylesheet" type="text/css" href="http://mathscribe.com/mathscribe/jqmath-0.4.0.css" />
 </head>
 <body>
     <div id="container">
@@ -34,7 +36,7 @@
 
             <div id="information_area">
                 <div id="speech_bubble">
-                    <div class="page" id="intro_0" overtake="true">
+                    <div class="page" id="intro_0">
                         <p>
                             A faster way for a computer to calculate which pixels to colour in to
                             give the appearance of a straight line between two points is to
@@ -45,10 +47,10 @@
                             Would you like me to explain first or do you want to try straight away?
                         </p>
                         <div class="button_area">
-                            <a id="left">Let me try</a><a id="right">Explain first</a>
+                            <a id="lb">Let me try</a><a id="rb">Explain first</a>
                         </div>
                     </div>
-                    <div class="page" id="intro_1" overtake="true">
+                    <div class="page" id="intro_1">
                         <p>
                             We are given two points to start with. A <span style="color:ForestGreen; text-shadow: 0px 0px 0px black">start point</span>
                             and an <span style="color:FireBrick; text-shadow: 0px 0px 0px black">end point</span>.
@@ -56,20 +58,20 @@
                         <p>
                             The coordinates of the <span style="color:ForestGreen; text-shadow: 0px 0px 0px black">start point</span> are:
                             <div id="point_a" class="formula point_info">
-                                <div id="x">x<span class="subscript">1</span> = <span class="val"></span></div><div id="y">y<span class="subscript">1</span> = <span class="val"></span></div>
+                                <div class="coordinate" id="x1"></div><div <div class="coordinate" id="y1"></div>
                             </div>
                         </p>
                         <p>
                             The coordinates of the <span style="color:FireBrick; text-shadow: 0px 0px 0px black">end point</span> are:
                             <div id="point_b" class="formula point_info">
-                                <div id="x">x<span class="subscript">2</span> = <span class="val"></span></div><div id="y">y<span class="subscript">2</span> = <span class="val"></span></div>
+                                <div class="coordinate" id="x2"></div><div <div class="coordinate" id="y2"></div>
                             </div>
                         </p>
                         <div class="button_area">
-                            <a id="right">Next</a>
+                            <a id="rb">Next</a>
                         </div>
                     </div>
-                    <div class="page" id="intro_2" overtake="true">
+                    <div class="page" id="intro_2">
                         <p>
                             The algorithm uses three variables <i>A</i>, <i>B</i> and <i>P</i>. First of all
                             we need to calculate the initial values of these variables using the following equations:
@@ -82,11 +84,11 @@
                         <p>
                             We can substitute the given coordinates into these equations.
                         </p>
-                        <div class="button_area" style="display: none">
-                            <a id="right">Next</a>
+                        <div class="button_area">
+                            <a id="rb">Next</a>
                         </div>
                     </div>
-                    <div class="page" id="intro_3" overtake="true">
+                    <div class="page" id="intro_3">
                         <p>
                             Once we have calculated the initial values of <i>A</i>, <i>B</i> and <i>P</i>
                             we can start drawing the line following a few simple rules.
@@ -99,10 +101,10 @@
                             And repeat this decision until we reach the end point.
                         </p>
                         <div class="button_area">
-                            <a id="right">Next</a>
+                            <a id="rb">Next</a>
                         </div>
                     </div>
-                    <div class="page" id="iteration" overtake="true">
+                    <div class="page" id="iteration">
                         <div class="formula">
                             <div id="A_equation"></div>
                             <div id="B_equation"></div>
@@ -121,20 +123,20 @@
                             <i>A</i> to <i>P</i>.
                         </p>
                         <div class="button_area">
-                            <a id="left">Skip</a><a id="right">Next</a>
+                            <a id="lb">Skip</a><a id="rb">Next</a>
                         </div>
                     </div>
-                    <div class="page" id="final_note" overtake="true">
+                    <div class="page" id="final_note">
                         <p>
                             Once we get to the end point we have finished drawing the line.
                             Would you like me to show you again?
                         </p>
                         <div class="button_area">
-                            <a id="left">Explain again</a><a id="right">Got it</a>
+                            <a id="lb">Explain again</a><a id="rb">Got it</a>
                         </div>
                     </div>
 
-                    <div class="page" id="good_luck" overtake="false">
+                    <div class="page" id="good_luck">
                         <p>
                             Alright, now it's your turn to try. This will be implemented soon...
                         </p>
@@ -145,6 +147,8 @@
     </div>
 
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <script type="text/javascript" src="http://huba.github.io/jquery-slideshow/jquery.slideshow.js"></script>
+    <script type="text/javascript" src="http://mathscribe.com/mathscribe/jqmath-etc-0.4.2.min.js"></script>
     <script type="text/javascript" src="script/game.js"></script>
 </body>
 </html>
